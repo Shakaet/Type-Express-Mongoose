@@ -1,5 +1,5 @@
 import { NextFunction, Request, Response } from "express";
-import { createProductsToDB, getAllProductsToDB, getspecificProducts, updateDatatoDb } from "./product.service";
+import { createProductsToDB, getAllProductsToDB, getSearchParamsProducts, getspecificDeletedProducts, getspecificProducts, updateDatatoDb } from "./product.service";
 
 
 
@@ -104,6 +104,54 @@ export let  updateProduct=async(req:Request,res:Response,next:NextFunction)=>{
             res.status(404).json({
             status:false,
             message:"Product updated failed",
+            data:err.message
+        })
+
+        }
+
+}
+
+export let getSpecificdeletedProducts=async(req:Request,res:Response,next:NextFunction)=>{
+
+        try{
+         
+            let id=req.params.productId
+
+        let result=await getspecificDeletedProducts(id)
+
+        res.status(201).json({
+            status:true,
+            message:" Products Deleted successfully!",
+            data:result
+        })
+        }catch(err:any){
+            res.status(404).json({
+            status:false,
+            message:"data Deleted failed",
+            data:err.message
+        })
+
+        }
+
+}
+
+export let getsearchParamsProducts=async(req:Request,res:Response,next:NextFunction)=>{
+
+        try{
+         
+            let {search}=req.query
+
+        let result=await getSearchParamsProducts(search)
+
+        res.status(201).json({
+            status:true,
+            message:"product serach successfully",
+            data:result
+        })
+        }catch(err:any){
+            res.status(404).json({
+            status:false,
+            message:"product search failed",
             data:err.message
         })
 

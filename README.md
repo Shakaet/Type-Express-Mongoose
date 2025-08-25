@@ -1,10 +1,15 @@
 # 🛒 Product Management API
 
-[![Node.js](https://img.shields.io/badge/Node.js-v18-green)](https://nodejs.org/)  
-[![TypeScript](https://img.shields.io/badge/TypeScript-v5-blue)](https://www.typescriptlang.org/)  
-[![Express](https://img.shields.io/badge/Express-4.x-orange)](https://expressjs.com/)  
-[![MongoDB](https://img.shields.io/badge/MongoDB-v6-green)](https://www.mongodb.com/)  
-[![License](https://img.shields.io/badge/License-MIT-lightgrey)](LICENSE)
+
+
+[![Node.js](https://img.shields.io/badge/Node.js-v18-green)](https://nodejs.org/) 
+[![TypeScript](https://img.shields.io/badge/TypeScript-v5-blue)](https://www.typescriptlang.org/) 
+[![Express](https://img.shields.io/badge/Express-4.x-orange)](https://expressjs.com/) 
+[![MongoDB](https://img.shields.io/badge/MongoDB-v6-green)](https://www.mongodb.com/) 
+[![Mongoose](https://img.shields.io/badge/Mongoose-v7-red)](https://mongoosejs.com/)
+
+
+
 
 ---
 
@@ -111,44 +116,6 @@ interface Inventory {
 
 ---
 
-## 🚀 Quick Start
-
-### Prerequisites
-```bash
-Node.js >= 18.0.0
-MongoDB >= 6.0.0
-TypeScript >= 5.0.0
-```
-
-### Installation
-```bash
-# Clone repository
-git clone <your-repo-url>
-cd product-management-api
-
-# Install dependencies
-npm install
-
-# Environment setup
-cp .env.example .env
-# Configure your MongoDB URI in .env
-
-# Development mode
-npm run dev
-
-# Production build
-npm run build
-npm start
-```
-
-### Environment Variables
-```env
-NODE_ENV=development
-PORT=3000
-MONGODB_URI=mongodb://localhost:27017/productdb
-```
-
----
 
 ## 📝 API Usage Examples
 

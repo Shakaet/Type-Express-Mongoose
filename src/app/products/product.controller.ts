@@ -3,14 +3,15 @@ import { createProductsToDB, getAllProductsToDB, getSearchParamsProducts, getspe
 
 
 
-export let CreateProducts=async(req:Request,res:Response,next:NextFunction)=>{
+
+export const CreateProducts=async(req:Request,res:Response,next:NextFunction)=>{
 
         try{
-            let product=req.body
+            const product=req.body
             console.log(product)
 
 
-        let result=await createProductsToDB(product)
+        const result=await createProductsToDB(product)
 
         res.status(201).json({
             status:true,
@@ -33,13 +34,13 @@ export let CreateProducts=async(req:Request,res:Response,next:NextFunction)=>{
 
 
 
-export let getAllProducts=async(req:Request,res:Response,next:NextFunction)=>{
+export const getAllProducts=async(req:Request,res:Response,next:NextFunction)=>{
 
         try{
          
 
 
-        let result=await getAllProductsToDB()
+        const result=await getAllProductsToDB()
 
         res.status(201).json({
             status:true,
@@ -58,13 +59,13 @@ export let getAllProducts=async(req:Request,res:Response,next:NextFunction)=>{
 
 }
 
-export let getSpecificProducts=async(req:Request,res:Response,next:NextFunction)=>{
+export const getSpecificProducts=async(req:Request,res:Response,next:NextFunction)=>{
 
         try{
          
-            let id=req.params.id
+            const id=req.params.id
 
-        let result=await getspecificProducts(id)
+        const result=await getspecificProducts(id)
 
         res.status(201).json({
             status:true,
@@ -83,20 +84,20 @@ export let getSpecificProducts=async(req:Request,res:Response,next:NextFunction)
 
 }
 
-export let  updateProduct=async(req:Request,res:Response,next:NextFunction)=>{
+export const  updateProduct=async(req:Request,res:Response,next:NextFunction)=>{
 
         try{
          
-            let id=req.params.productId
+            const id=req.params.productId
 
             // console.log(id,req.body)
 
 
-            let data=req.body
+            const data=req.body
 
             
 
-        let result=await updateDatatoDb(id,data)
+        const result=await updateDatatoDb(id,data)
 
         res.status(201).json({
             status:true,
@@ -115,13 +116,13 @@ export let  updateProduct=async(req:Request,res:Response,next:NextFunction)=>{
 
 }
 
-export let getSpecificdeletedProducts=async(req:Request,res:Response,next:NextFunction)=>{
+export const getSpecificdeletedProducts=async(req:Request,res:Response,next:NextFunction)=>{
 
         try{
          
-            let id=req.params.productId
+            const id=req.params.productId
 
-        let result=await getspecificDeletedProducts(id)
+        const result=await getspecificDeletedProducts(id)
 
         res.status(201).json({
             status:true,
@@ -140,13 +141,13 @@ export let getSpecificdeletedProducts=async(req:Request,res:Response,next:NextFu
 
 }
 
-export let getsearchParamsProducts=async(req:Request,res:Response,next:NextFunction)=>{
+export const getsearchParamsProducts=async(req:Request,res:Response,next:NextFunction)=>{
 
         try{
          
-            let {search}=req.query
+            const {search}=req.query
 
-        let result=await getSearchParamsProducts(search)
+        const result=await getSearchParamsProducts(search as string)
 
         res.status(201).json({
             status:true,

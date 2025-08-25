@@ -1,4 +1,4 @@
-import express, { NextFunction, Request, Response } from "express"
+import express, { Request, Response } from "express"
 
 export const app = express()
 import cors from "cors"
@@ -28,7 +28,7 @@ app.use((req:Request, res:Response) => {
 
 // /// global error handler
 
-app.use((err:any,req:Request,res:Response,next:NextFunction)=>{
+app.use((err:unknown,req:Request,res:Response)=>{
   if(err){
     // console.log(err)
 

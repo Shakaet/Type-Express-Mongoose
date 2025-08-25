@@ -6,6 +6,9 @@
     "start": "node dist/app/server.js",
     "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
     "ts": "tsc -w",
+    "build":"tsc",
+    "lint": "eslint src --ext .ts .",
+     "lint:fix": "npx eslint src --fix",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -22,8 +25,18 @@
     "ts-node-dev": "^2.0.0"
   },
   "devDependencies": {
+    "@eslint/js": "^9.34.0",
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.3",
-    "typescript": "^5.9.2"
+    "@typescript-eslint/eslint-plugin": "^8.40.0",
+    "@typescript-eslint/parser": "^8.40.0",
+    "eslint": "^9.34.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "globals": "^16.3.0",
+    "jiti": "^2.5.1",
+    "prettier": "^3.6.2",
+    "typescript": "^5.9.2",
+    "typescript-eslint": "^8.40.0"
   }
 }

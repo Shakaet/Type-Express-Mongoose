@@ -23,6 +23,7 @@ export let CreateProducts=async(req:Request,res:Response,next:NextFunction)=>{
             message:"data inserted failed",
             data:err.message
         })
+        next()
 
         }
 
@@ -51,6 +52,7 @@ export let getAllProducts=async(req:Request,res:Response,next:NextFunction)=>{
             message:"data fetched failed",
             data:err.message
         })
+        next()
 
         }
 
@@ -75,6 +77,7 @@ export let getSpecificProducts=async(req:Request,res:Response,next:NextFunction)
             message:"data fetched failed",
             data:err.message
         })
+        next()
 
         }
 
@@ -106,6 +109,7 @@ export let  updateProduct=async(req:Request,res:Response,next:NextFunction)=>{
             message:"Product updated failed",
             data:err.message
         })
+        next()
 
         }
 
@@ -130,6 +134,7 @@ export let getSpecificdeletedProducts=async(req:Request,res:Response,next:NextFu
             message:"data Deleted failed",
             data:err.message
         })
+        next()
 
         }
 
@@ -153,7 +158,10 @@ export let getsearchParamsProducts=async(req:Request,res:Response,next:NextFunct
             status:false,
             message:"product search failed",
             data:err.message
+            
         })
+        next()
+
 
         }
 

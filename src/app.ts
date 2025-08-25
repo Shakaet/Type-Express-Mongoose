@@ -1,4 +1,4 @@
-import express, { Request, Response } from "express"
+import express, { NextFunction, Request, Response } from "express"
 
 export const app = express()
 import cors from "cors"
@@ -15,6 +15,28 @@ app.use("/api",productsRouter)
 
 app.get('/', (req:Request, res:Response) => {
   res.send('Hello World!')
+})
+
+
+// // // catch all error
+app.use((req:Request, res:Response) => {
+  res.status(404).json({
+    status: false,
+    message: "not found"
+  });
+});
+
+// /// global error handler
+
+app.use((err:any,req:Request,res:Response,next:NextFunction)=>{
+  if(err){
+    // console.log(err)
+
+    res.status(400).json({
+      status:false,
+      message:"soththing went wrong"
+    })
+  }
 })
 
 

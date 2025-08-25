@@ -55,19 +55,21 @@ It allows CRUD operations for products with support for **variants**, **inventor
 ## 📂 Project Structure
 
 
-src/
-│
-├── product/
-│   ├── product.controller.ts    # Express route handlers
-│   ├── product.model.ts         # Mongoose schemas and model
-│   ├── product.service.ts       # Database operations
-│   ├── validate.joi.ts          # Joi validation schemas
-│   └── product.interface.ts     # TypeScript interfaces
-│
-├── app.ts                        # Express app & routes setup
-└── server.ts                     # App listener
+```
+📁 src/
+├── 📂 app/products/
+│   ├── 📄 product.controller.ts    # Request handlers & business logic
+│   ├── 📄 product.interface.ts     # TypeScript interfaces
+│   ├── 📄 product.model.ts         # Mongoose schemas & models
+│   ├── 📄 product.route.ts         # Express routes
+│   ├── 📄 product.service.ts       # Database operations
+│   └── 📄 validate.joy.ts          # Joi validation schemas
+├── 📂 config/
+│   └── 📄 index.ts              # Database configuration
+├── 📄 app.ts                       # Express app setup
+└── 📄 server.ts                    # Server entry point
 
-
+              
 ---
 
 ## 📋 API Endpoints

@@ -76,12 +76,12 @@ It allows CRUD operations for products with support for **variants**, **inventor
 
 | Method | Endpoint | Description | Status |
 |--------|----------|-------------|--------|
-| 🟢 `POST` | `/products` | Create new product | ✅ Active |
-| 🔵 `GET` | `/products` | Get all products | ✅ Active |
-| 🔵 `GET` | `/products/:id` | Get product by ID | ✅ Active |
-| 🟡 `PUT` | `/products/:productId` | Update product | ✅ Active |
-| 🔴 `DELETE` | `/products/:productId` | Delete product | ✅ Active |
-| 🔍 `GET` | `/pro?search=query` | Search products | ✅ Active |
+| 🟢 `POST` | `api/products` | Create new product | ✅ Active |
+| 🔵 `GET` | `api/products` | Get all products | ✅ Active |
+| 🔵 `GET` | `api/products/:id` | Get product by ID | ✅ Active |
+| 🟡 `PUT` | `api/products/:productId` | Update product | ✅ Active |
+| 🔴 `DELETE` | `api/products/:productId` | Delete product | ✅ Active |
+| 🔍 `GET` | `api/pro?search=query` | Search products | ✅ Active |
 
 ---
 
